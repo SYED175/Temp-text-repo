@@ -1,0 +1,231 @@
+Both React & React DOM are available over a CDN
+
+Javascript library to build dynamic & interactive user interfaces.
+
+React creates web page with small resuable components, 
+React takes care of creating & updating DOM
+
+JS is imperative - step by step
+React is declarative - just tell the target, it does the rest itself.
+
+
+// In the context of React, "props" is short for "properties,"
+// and it refers to the mechanism by which data is passed from a parent component to a child component.
+-------------
+
+Create using vite
+npm create vite@4.4.1
+npm run dev
+
+-------------
+
+npx create-react-app my-app
+cd my-app
+npm start
+
+
+-------------
+
+By using export default, you simplify the import statement, making it more straightforward when there is only one main export from the module
+Without the default keyword, the import syntax would be different. For example, if you didn't use export default and just did a named export:
+
+The import would look like this:
+import { Article } from './path-to-your-module';
+
+
+using the ES6 export syntax to re-export the default exports
+// index.js
+export { default as AppName1 } from './AppName1';
+export { default as AppName2 } from './AppName2';
+export { default as AppName3 } from './AppName3';
+By creating this intermediate index.js file, you can effectively achieve a single import statement while keeping the components in separate files
+-------------
+JSX - javascript xml,
+combines javascript with html like tags
+makes it easier to design UI components
+
+JSX Javascript XML syntax; underhood it compiles to javascript,
+.jsx is react component file extension
+
+Babel.io is a tool that allows you to see how jsx is converted into javascript
+
+-------------
+
+functional components - more popular, stateless,
+class components - stateful
+
+-------------
+
+export: enables the use of component in other parts
+default export: allows exporting of a single component as the default
+
+Naming must be capitalise, as to differentiate b/w html and custom components
+
+using {} embed any javascript expression directly within jsx. This includes variables, function calls and more.
+
+function App(){
+	let number = Math.random*100;
+	return <h1 style={{background-color:'red'}}>Math.round(number)</h1>
+}
+
+
+-------------
+
+npm i bootstrap@5.3.2
+
+import 'bootstrap/dist/css/bootstrap.min.css'
+
+-------------
+
+First react app - is to do app version 1
+
+-------------
+
+map we can use to transform to jsx elements
+
+
+conditional rendering: {foodList.length===0 && <h2>The list is empty</h2>}
+
+Props (properties): Mechanism for passing data from parent to child, it read-only by default.
+
+---------------------
+String interpolation
+
+const name = "John";
+const age = 25;
+
+const message = `Hello, my name is ${name}, and I am ${age} years old.`;
+
+console.log(message);
+
+-------------------
+
+Passing Children
+
+children is a special prop for passing elements into components
+
+<div>{props.children}</div>
+
+
+Tit for tat The Defector
+
+------------------
+
+This is a common pattern when you want to pass parameters to the event handler.
+The advantage of using this approach is that it allows you to pass parameters to the event handler. 
+However, keep in mind that a new function is created every time the component renders, which might impact performance in some cases.
+therefore useCallBack hook.
+<button onClick={() => handleClick(foodItem)}>Click me</button>
+
+
+-------------
+
+while using useState
+
+  foodList.push(textDisplay);
+      // let newItems = [...foodList, textDisplay];
+      // setFoodArr(newItems);
+      setFoodArr(foodList);
+
+if we use push method 
+the state isn't getting updated
+but if use commented lines approach it works why... because state should be immutable & you were trying to modify it.
+
+
+ANS:  
+Note:: React relies on immutability to efficiently update the virtual DOM (because Immutability helps in preventing unnecessary component re-renders.) 
+and determine when to re-render components.
+when you use the push method to add an item to an array that's stored in a state variable (like with useState), 
+React might not detect the change, and therefore, it won't trigger a re-render. 
+
+
+useEffect - to do later
+
+--------------
+
+is useState an async?
+useState updates in React are not inherently asynchronous. 
+However
+const [count, setCount] = useState(0);
+
+// Synchronous update
+setCount(count + 1);
+console.log(count); // This might not reflect the updated state immediately
+In the example above, the console.log might not immediately show the updated value 
+because React batches state updates.
+
+useRef() is not primarily about triggering renders; it's about holding mutable values that persist across renders without causing re-renders.
+
+useState() is specifically for managing component state, and when the state changes, it triggers a re-render of the component.
+When the state variable changes, React triggers a re-render of the component to reflect the updated state.
+
+---------------
+Context API
+
+use case:
+Sharing Global State:
+Avoiding Prop Drilling:When you find yourself passing data through several layers of components just to get it to a deeply nested component
+Theme or Configuration Settings:
+User Authentication State:Managing user authentication state across different parts of your application is a common use case for Context.
+
+Note: Context updates can trigger unnecessary renders if not used carefully. 
+Be aware of the potential impact on performance and consider optimizing with tools like React.memo or useMemo where needed.
+---------------
+
+useReducer : an advance version of useState for handling complex state logic
+
+--------------
+fetch: Modern Javascript API for network requests
+promise-based: return an a promise with a response object
+
+--------------
+
+useEffect() hook
+while using setInterval in react should i use compulsory useEffect?
+ChatGPT
+Yes, when using setInterval or any other side effect that involves asynchronous or repeated operations in a React component, 
+it is recommended to use useEffect to manage the side effect. The useEffect hook is designed to handle side effects in functional components.
+
+----------------
+
+useCallBack() hook
+
+useCallback is a React hook that memoizes a callback function. 
+It returns a memoized version of the callback that only changes if one of the dependencies has changed.
+This helps in preventing unnecessary re-renders in child components.
+
+use case:
+what happens if function is re-created at every render?
+
+If a function is recreated at every render without being memoized, it can lead to performance issues in certain scenarios, 
+especially when passing that function as a prop to child components. 
+This happens because a new function reference is created with each render, 
+causing child components that depend on the prop to re-render unnecessarily.
+
+
+---------------
+
+useMemo
+caches value & is only changed when dependency array is changed.
+therefore prevents unnecessary re-calculations.
+ideal for intensive computations, that shouldn't run on every re-render.
+
+useCallBack memoizes function, useMemo memoizes values.
+
+
+--------------
+
+import react-router-dom;
+
+const router = createBrowserRouter([
+{
+	path:"/",
+	Element:<App/>
+}
+]);
+
+<RouterProvider router={router} />
+
+instead of anchor tags use Link tag with to= instead of href=
+
+useNavigate for programatically navigation

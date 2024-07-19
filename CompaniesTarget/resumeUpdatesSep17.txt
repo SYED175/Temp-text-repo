@@ -1,0 +1,62 @@
+Please create a simple resume based on the skills I provide below..
+Also you can use your own sentences to add something extra.
+
+
+Skills:
+
+1+ year experience in Angular, know the concepts of routing, guards, http, ngOnInit, etc
+Microsoft Azure, Ability to create VM, good understanding about Azure Active Directory, Created app service and hosted the express app with azure.
+created a backend built with express.
+
+
+
+=========================================
+
+Here is a sample resume based on the skills provided:
+
+# John Doe
+123 Main Street, Anytown USA | john.doe@email.com | (123) 456-7890
+
+## Summary
+Full Stack Developer with over 1 year of experience in Angular and Microsoft Azure. Proficient in Java, DSA, and MySQL. Hands-on experience with Spring Boot.
+
+## Technical Skills
+- Languages: Java, JavaScript/TypeScript/Node.js, C++, shell scripts, SQL
+- Databases: MySQL, PostgreSQL, MongoDB, SQL Server, Oracle
+- Web Technologies: Angular, HTML, CSS/SASS, Bootstrap, jQuery, AJAX, React/Redux, React Bootstrap
+- Frameworks: Spring Boot, Hibernate, Spring MVC, Spring AOP, NgRx/RxJS, Angular Material, PrimeNG
+
+## Professional Experience
+### Full Stack Developer
+ABC Company, Anytown USA | January 2022 - Present
+- Developed and maintained web applications using Java, Spring, and Hibernate
+- Created flexible server MySQL provided by Azure
+- Hosted Express app with Azure App Service
+- Built a backend with Express that uses flexible MySQL provided by Azure
+- Worked with database technologies like MySQL, Oracle, MS SQL Server
+- Designed dynamic web applications using HTML5, CSS3, Bootstrap, JavaScript, AJAX, JSON, and Angular JS
+
+### Java Developer
+XYZ Company, Anytown USA | January 2021 - December 2021
+- Worked in Core Java and JavaEE platform with Servlets, JSP, JDBC, Multithreading, Hibernate, Spring MVC, Spring Boot
+- Worked on different layers of Spring MVC architecture such as Spring Controller, service and repository classes
+- Designed dynamic web applications using HTML5, CSS3, Bootstrap, JavaScript, AJAX, JSON, and Angular JS
+- Experienced working on Hibernate Beans & HQL to map to tables and retrieve data from the database
+
+## Education
+Bachelor of Science in Computer Science
+Anytown University, Anytown USA | May 2021
+
+## Certifications
+- Microsoft Certified: Azure Fundamentals
+- Oracle Certified Professional, Java SE 11 Developer
+
+This is just a sample resume and can be modified as per individual requirements.
+
+Citations:
+[1] https://www.hireitpeople.com/resume-database/64-java-developers-architects-resumes/120372-full-stack-developer-spring-boot-angular-2-resume-englewood-cliffs-nj
+[2] https://www.hireitpeople.com/resume-database/64-java-developers-architects-resumes/406712-java-angular-mongodb-full-stack-developer-resume-cincinnati-oh-1
+[3] https://www.livecareer.com/resume-search/r/full-stack-java-developer-9e3d1624342e331c029b125468f627a5
+[4] https://www.livecareer.com/resume-search/r/full-stack-software-developer-67f622c51bd84c5981626a70ab61ea47
+[5] https://groups.google.com/g/chandra_technical_recruiter/c/SX5rZUG8DWY
+[6] https://www.tealhq.com/resume-example/java-full-stack-developer

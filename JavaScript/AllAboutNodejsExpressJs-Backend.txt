@@ -1,0 +1,184 @@
+Jan 14 - 2024
+
+Node.js
+Good for fast & scalable apps,
+
+Single-threaded, event-driven
+
+Not used for cpu-intensive server side rendering.
+
+----------------------------------------
+3*8
+24
+
+_-4
+20 //underscore gives previous results
+
+-------------------------------------------
+
+es6 for promises, in es8 async await for handling async operations, and overcome call back hell
+
+
+
+const data = fs.readFileSync(`${__dirname}/dev-data/data.json`, 'utf-8');
+console.log(`${__dirname}`)
+//here __dirname gives the absolute path, this is particularly useful if we our executing our script from some other location, 
+therefore we have an absolute path to the file.
+
+
+--------------------------------------
+
+output = output.replace(/{%IMAGE%}/g,prod.image); /g is global || replace all 
+url.parse(req.url,true); true means we have query in our route
+
+---------------------------------------
+
+npm init //create a configuration file called package.json
+
+npm install slugify 
+
+npm install nodemon --save-dev //this tells this is a development dependency (dev tool) and not a regular dependency 
+
+nodemon not working on windows 10, hence used npm i supervisor,
+------------------------------------------
+
+One of the main benefits of promises is the ability to chain them together, making the code more readable and avoiding callback hell.
+
+const myPromise = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const success = false;
+    if (success) resolve('Operation succeeded');
+    else reject('Operation failed');
+  }, 1000);
+});
+
+myPromise
+  .then((res) => {
+    console.log(res);
+    return 'anotherValue';
+  })
+  .then((res) => {
+    console.log(res);
+  })
+  .catch((err) => {
+    console.log(`${err} catch block`);
+  });
+
+------------------------------------
+
+section 2: Intro to node.js & npm - 3hrs --done 15/01
+section 5 - async promises - 1hr --done 15/01
+section 6 -  Express.js - 3hrs
+section 9 - Error Handling - 2hrs 
+section 10 -  Authentication, Authorization - 5.5hrs
+
+
+Implement Google Auth,Email auth, phone auth.
+
+
+12 hours content per day 3hrs
+clean code
+
+----------------------------------
+
+async await new feature in es8
+
+consuming promises with async await instead of .then() 
+
+
+  const data = await readfilePromise(`${__dirname}/dog.txt`);
+  console.log(data);
+  
+  // the data will always have resolve value if success & the code waits for the 
+  promise to be fulfilled before executing the next line
+  
+-----------------------------------
+  
+  const getDogPic = async () => {
+  try {
+    const data = await readfilePromise(`${__dirname}/dog.txt`);
+    console.log(data);
+
+    const res = await superagent.get(
+      `https://dog.ceo/api/breed/${data}/images/random`
+    );
+    console.log(res.body.message);
+
+    await writeFilePromise('output.txt', res.body.message);
+    console.log('file written successfully');
+  } catch (err) {
+    console.log(err);
+  }
+};
+
+ getDogPic();
+-----------------------------------
+async function automatically returns a promise.
+
+waiting for multiple promises simultaneously
+
+const arrayRes = await Promise.all([pro1,pro2,pro3]);
+
+----------------------------------------------
+Express
+
+Jsend: reformatting json, with status: and data object.
+methods like enveloping 
+
+---------------------------------------
+app.use(express.json())); //middleware
+
+what is this why do we need this?
+
+when client sends the data to server in the body of a request (during POST), 
+the server uses middleware to parse the data and extract json data from it, because by default express doesn't parse req body.
+But now With middleware present we can use req.body json data
+
+
+Object.assign({id:newId},req.body); //merges 2 objects into 1
+----------------------------------------
+request-response cycle in express?
+When a request hits your Express server, it goes through a series of middleware functions, bro!  
+Middleware functions can perform various tasks such as logging, parsing the request body, handling authentication, etc.
+After passing through middleware, Express looks for the route that matches the requested URL and HTTP method, bro!
+If a matching route is found, the corresponding route handler is executed.
+After the route handler completes, the request may pass through additional middleware, bro!
+ 
+const express = require('express');
+const app = express();
+
+// Middleware
+app.use((req, res, next) => {
+  console.log('Middleware executing, bro!');
+  next();
+});
+
+// Route Handling
+app.get('/hello', (req, res) => {
+  res.status(200).send('Hello, bro!');
+});
+
+// Middleware after the Route Handler - additional middleware
+app.use((req, res) => {
+  console.log('Finalizing response, bro!');
+  // Additional logic or response finalization here
+});
+
+// Server Listening
+const PORT = 3000;
+app.listen(PORT, () => {
+  console.log(`Server is running on http://localhost:${PORT}, bro!`);
+});
+
+------------------------------------------
+
+middleware if defined at top, it will be used globally for all route handlers, therefore order matters at express.
+
+
+-------------------------------------------
+
+creating & mounting routers, for seperating different routes.
+Param middleware very useful... coming from Router() middleware.
+
+
+app.use(express.static(`${__dirname}/public`)); //for serving static files

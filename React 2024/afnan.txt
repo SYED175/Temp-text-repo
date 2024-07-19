@@ -1,0 +1,41 @@
+Q1)const array1 = [
+  { name: 'Jake', roll: 10, marks: 80 },
+  { name: 'John', roll: 20, marks: 85 },
+  { name: 'Amy', roll: 30, marks: 60 }  
+]
+
+1)find the students with marks greater than 60, using filter
+2)find the total sum of the marks for the students greater than 60, using reduce
+
+
+Q2)create a closure function, withe createBase(6),on addSix(10) //return 16
+
+function outerFunction(value1){
+let val = value1;
+
+return function(value2){
+	return value1+v;
+}
+}
+
+const obj1 = outerFunction(6);
+
+console.log(obj1(10)); //16
+
+Q3)normal function is given with setTimeOut inside body, it should be converted to promise.
+
+Theory questions:
+Tell me about your projects, how did you use react in those projects,
+prop drilling?
+context api,
+redux,
+
+optimise react application, we can use useMemo(), useCallback()
+
+code splitting, lazy loading,
+
+useEffect() and clean up function.
+
+debouncing,
+
+

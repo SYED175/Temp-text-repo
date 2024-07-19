@@ -1,0 +1,75 @@
+document.getElementById('computer-choice')
+Here the method is called on document object, the method getElementById is used to retrieve reference to HTML element.
+It allows to developers to access, manipulate specific element such as updating the content, styling, etc.
+
+ 
+innerHTML is used to both GET & SET html content.
+example: SETTING
+const element = document.getElementById('exampleElement');
+element.innerHTML = "<p>This is a new <strong>content</strong>.</p>";
+
+example: GETTING
+const element = document.getElementById('exampleElement')
+const htmlContent = element.innerHTML
+The entire html content is stored including tags & not the reference.
+
+
+querySelector:is a JavaScript method that allows you to select and retrieve the first HTML element that matches a specified CSS selector.
+querySelectorAll: selects all elements matching the selector. (for element document.querySelectorAll('button'),
+for select by class document.querySelectorAll('.className'), for select by id document.querySelectorAll('#id') )
+
+let gridDisplay = document.querySelector('#grid')
+CSS selectors in methods like querySelector, we use # for id selectors.
+
+when to use querySelector and getElementByID whats the difference?
+getElementById:
+Use getElementById when we need to select a single element based on its unique identifier (ID).
+It is a faster and more direct way to access a specific element if you know its ID, as IDs must be unique within a document.
+
+querySelector:
+It allows you to use any valid CSS selector, making it more versatile for selecting elements by tag name, class, attribute, etc.
+It returns the first matching element.
+
+
+
+enclosing scope (lexical scoping).
+
+Note:
+The const keyword prevents you from reassigning arr to a different array, but it does not prevent modifications to the array itself.
+const arr = [];
+arr.push(1); // Valid operation, modifies the array
+arr.push(2); // Valid operation, modifies the array
+console.log(arr); // Output: [1, 2]
+
+
+//Random sort
+cardArray.sort(()=>0.5-Math.random());
+
+
+removeEventListener. The same function (handleClick) and the same type of event ('click') must be specified to remove the correct listener.
+
+
+mousedown vs click in eventlistner?
+The 'click' event occurs when a mouse button is both pressed down and released over an element.
+The 'mousedown' event occurs when a mouse button is pressed down over an element.
+It doesn't necessarily mean that the button is released or that a complete click has occurred.
+
+
+---------------------
+
+class Somnia {
+  constructor(a, b) {
+    this.x = a;
+    this.y = b;
+  }
+}
+
+n JavaScript classes, properties can be declared in the constructor without explicitly declaring them with var, let, or const. 
+When you assign values to this.x and this.y in the constructor, they automatically become properties of the class.
+----------------------
+
+
+ES6 (EcmaScript 6)is a specific version of EcmaScript Standard.
+ES6 was introduced in 2015,
+with this version now the JavaScript could use let const block scoping variables,
+arrow function, ES6 introduced class syntax for defining classes and object-oriented programming...

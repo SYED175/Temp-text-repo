@@ -1,0 +1,36 @@
+Queue - FIFO, Interface, implemented by LinkedList 
+
+
+Queue<String> queue = new LinkedList<>();
+
+// add() || offer() || enqueue
+// remove() || poll() || dequeue
+// element() || peek() || peek
+
+queue.offer("Karen");
+queue.offer("Chad");
+queue.offer("Steve");
+
+System.out.println(queue.peek()); // output: Karen
+System.out.println(queue); // output: [Karen,Chad,Steve]
+queue.poll()
+System.out.println(qdafajdut: [Chad,Steve]
+
+System.out.println(queue.isEmpty()); // derived from Collection interface
+System.out.println(queue.contains("Steve")); // derived from Collection interface
+System.out.println(queue.size()); // derived from Collection interface
+
+//uses
+Printer queue
+Keyboard buffer, (letters should appear on the screen in order they are passed)
+Used LinkedList, Priority Queues,Breadth-first-search
+
+--x--x--
+
+
+Priority Queues - FIFO, Class, servers the element first with highest priority, before serving lower priority.
+
+Queue<String> queue = new PriorityQueue<>();
+
+
+

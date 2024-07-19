@@ -1,0 +1,94 @@
+        
+      
+        
+        .thumbnail {
+            width: 100%;
+        }
+
+
+        /* note: by changing width, it automatically adjusts height 
+                <input> just like <link> and <img> its also void element
+            */
+
+       
+        .video-grid{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 15px;
+            row-gap: 40px;
+        }
+       
+        
+        @media (max-width:800px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (min-width:801px) and (max-width:999px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        @media (min-width:1000px) {
+            .video-grid {
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+        }
+
+        .thumbnail-row {
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .video-time{
+            /* font-family: Roboto,Arial; we can add this property to parent div, it gets inherited here also */
+           /* Note: not all properties get inherited, mostly text-properties get inherited */
+            font-size: 13px;
+            font-weight: 500;
+            padding: 4px;
+            border-radius: 2px;
+            background-color: rgb(19, 18, 18);
+            color: white;
+            position: absolute;
+            bottom: 8px;
+            right: 5px;
+        }
+        
+        .video-info-row-grid{
+            display: grid;
+            grid-template-columns: 50px 1fr;
+        }
+
+
+        .video-title{
+            margin-top: 0px;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 10px;
+        }
+
+        .video-author,
+        .video-stats{
+            font-size: 12px;
+            color: rgb(96,96,96);
+        }
+
+        .video-author{
+            margin-bottom: 4px;
+        }
+
+        .video-stats{
+            font-size: 12px;
+            color: rgb(96,96,96);
+        }
+        
+
+        .profile-picture{
+            width: 36px;
+            border-radius: 36px;
+        }
+
+        /* table, and table-cell is the one of the solution for 2 horizontal divs are not touching each other */

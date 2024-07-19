@@ -1,0 +1,15 @@
+In each round find min value starting from index = 0 & swap it.
+
+round - 1: 64,25,12,22,11 - (swap 64 with min val in array starting from index = 0, ie 11)
+round - 2: 11,25,12,22,64 - (swap 25 with min val in array starting from index = 1, ie 12)
+round - 3: 11,12,25,22,64 - 
+round - 4: 11,12,22,25,64 -
+
+for n elements in array, n-1 rounds
+
+
+space complexity: O(1)
+time complexity: Best & worst case =  O(n2)
+
+use case:
+when array size is small, we can try selection sort

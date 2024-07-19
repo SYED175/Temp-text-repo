@@ -1,0 +1,31 @@
+.grid{
+    height: 300px;
+    width: 570px;
+    border-style: solid;
+    border-width: 1px;
+    position: relative;
+}
+
+.block{
+    position: absolute;
+    height: 20px;
+    width: 100px;
+    background-color: blue;
+    /* left: 10px; will be adding through javascript */
+    /* bottom: 270px; will be adding through javascript */
+}
+
+.userBlock{
+    position: absolute;
+    height: 25px;
+    width: 100px;
+    background-color: purple;
+}
+
+.ball{
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 10px;
+    background-color: red;
+}

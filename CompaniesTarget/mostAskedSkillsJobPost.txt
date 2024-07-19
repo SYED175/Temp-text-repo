@@ -1,0 +1,30 @@
+Java Developer 
+ Sound knowledge in Java / J2EE technologies 
+ Good experience in developing RESTful web services
+ Sound knowledge in RDBMS database
+ familiarity with messaging systems such as Kafka, RabbitMQ, unit testing
+ 
+FrontEnd
+ Develop both member-facing and internal-facing features around onboarding, scheduling, billing, and client management.You have extensive experience with web technologies. We are language agnostic in our interviews but require experience with one or more common web frameworks (React, Angular, etc.).
+You are proficient with CSS preprocessors (Sass, Less, etc.).
+You have an understanding of accessibility and semantic HTML.
+You have experience interacting with APIs.
+You have experience writing frontend unit tests in a testing platform such as jest or mocha.
+You have a proficient understanding of code versioning tools, such as Git.
+ 
+ 
+ 
+Remote Culture
+ People who have worked remotely before are ideal candidates. We also look for people who have a strong work ethic, exhibit the ability to work independently, and possess strong communication skills over all platforms.
+ If they’ve worked remotely before
+If they’ve done independent consulting
+Demonstrated responsibility
+Great team member
+
+
+
+Java Developer at crossover
+At least 2 years of professional experience as a Java developer (excluding university courses)
+Knowledge of Object-Oriented Programming (OOP) patterns and concepts
+Familiarity with J2EE frameworks, ZK framework, AngularJS, and SOAP/REST
+Basic SQL skills

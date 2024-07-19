@@ -1,0 +1,155 @@
+Docker:
+Its an platform for running, shipping applications, 
+It packages the application with all its dependencies together in form of a container.
+
+Understanding docker:
+DockerFile: Text document containing the commands to assemble image.
+DockerImage: Template to create a image.. (created using docker file).
+
+
+------------------
+
+commands:
+
+*check version
+docker -v
+
+*pull image
+docker pull hello-world
+docker pull openjdk
+
+*show images
+docker images
+
+
+docker ps -a
+list of continers which were created
+
+
+*run with flag - 
+docker run -e
+
+docker run --name pythonContainer  -d 3af3rfedd(imageID)
+1342r3eedcfldja281818
+
+docker ps
+list of containers which are running.
+
+
+*to keep container up & running.. we need use -it (interactive)
+docker run --name pythonContainer1 -it -d python 
+
+
+*go inside the running container
+docker exec -it containerid "command given by container.. by docker ps"
+
+question, download, openjdk from docker hub, create its container up running.
+
+ans:
+
+docker pull openjdk
+
+//check images
+docker images
+
+
+//any container running
+docker ps 
+
+//run the image or create a container, up & running
+docker run --name javaContainer -it -d openjdk
+
+
+//use container, go inside
+docker exec -it containerId||javaContainer jshell
+
+after this we go inside container
+
+------
+
+docker pull mysql
+
+see the docs its helpful
+
+if the images is a server type which requires a port, then dont need to mention -it to keep it running.
+
+
+
+docker login
+
+docker commit, save image
+docker push, image will be push from local system
+
+
+--------------------
+create image..
+create folder.
+
+open vscode
+
+create file
+
+Dockerfile without extension
+
+FROM ubuntu
+MAINTAINER syed
+RUN apt update
+CMD ['echo','this is ubuntu-image']
+
+
+docker build -t myimagebuntuimage .
+
+//image is now created
+docker run --name ubuntuContainer myimagebuntuimage
+
+
+-----------------------
+
+create a simple javaprogram
+now create a Dockerfile
+
+
+inside docker file:
+
+#base image is needed
+from openjdk:11
+
+WORKDIR usr/src/myapp
+
+COPY . usr/src/myapp/
+
+RUN javac Test.java
+
+ 
+cmd ["java","Test"]
+
+
+
+docker compose
+
+its a high level tool for defining and processing multi-containers
+configuration defined in docker-compose.yml file,
+for managing multiple services
+
+docker compose up
+----------------------
+
+created windows VM in azure portal which runs Windows server 2019
+RDP (Remote desktop protoco)
+Internet Information Services (IIS) is a web server developed by Microsoft for hosting websites, web applications, and services on Windows servers.
+
+
+GCP
+cloudhealthcare API, enable api for the project created.
+
+----------------------
+
+
+ssh stands for secure shell, cryptographic network protocol use secure communication over computer network.
+ssh is commonly used for accessing remote servers, it provides a secure way to login to remote server, key features, encrypting, authentication, file transfer using  SCP
+
+example:
+ssh username@192.168.1.100  
+#remote server IP address,
+
+it will ask the password for that username, once logged in successfully you can access remote servers (command line interface) terminal

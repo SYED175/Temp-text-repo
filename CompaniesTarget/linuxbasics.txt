@@ -1,0 +1,13 @@
+Basic file command:
+pwd, ls, cd, mkdir
+
+File manipulation command.
+
+'cp' - to copy files or directories
+'mv' - remove or rename directories
+'rm' - remove files or directories
+'cat' -  display the entire content of a file.
+
+'ssh username@IpAddress'
+
+

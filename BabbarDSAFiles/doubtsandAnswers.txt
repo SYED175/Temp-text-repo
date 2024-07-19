@@ -1,0 +1,170 @@
+Otherwise I agree with the other people who already mentioned autoboxing/unboxing.
+
+<div class="video-preview">
+
+        <div class="vertical-card-1">
+            <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
+        </div>
+
+        <div class="vertical-card-2">
+
+            <div class="horizontal-card-1">
+                <img src="thumbnails/channel-1.jpeg">
+            </div>
+
+            <div class="horizontal-card-2">
+                <p class="video-title">
+                    Talking Tech and AI with Google CEO Sundar Pichai!
+                </p>
+                <p class="author">
+                    Marques Brownlee
+                </p>
+                <p class="statistics">
+                    3.4M views &#183; 6 months ago
+                </p>
+    
+            </div>
+           
+        </div>
+
+</div>
+	
+	//will add later, sep 25
+	
+	
+	.div-1{
+            border-style: solid;
+            display: inline-block;
+            }
+            
+        .div-2{
+            border-style: solid;
+            border-color: red;
+            display: inline-block;
+            }
+        .big-div-1{
+            border-style: solid;
+            border-color: blue;
+            display: inline-block;
+        }
+        .big-div-2{
+            border-style: solid;
+            border-color: green;
+        }
+		
+		
+	<div class="big-div-1">
+        <div class="big-div-2">
+            <img src="thumbnails/thumbnail-1.webp">
+        </div>
+        <div class="div-1">
+            <p>Hello div</p>
+        </div>
+        <div class="div-2">
+            <p>world div</p>
+        </div>
+    </div>
+	
+	
+	
+	if(res==0 && bal==0) {
+				int sum = valueOfA+valueOfB;
+				System.out.print(sum);
+				sb.append(sum);
+				
+//				System.out.println(" ok1 "+i);
+			}
+			else if(res==0 && bal==1) {
+				System.out.print(0);
+				sb.append(0);
+
+//				System.out.println(" ok2 "+i);
+				bal=0;
+			}
+			else {
+				System.out.print(1);
+				sb.append(1);
+
+//				System.out.println(" ok3 "+i);
+				bal=1;
+			}
+			
+			
+			
+			
+			
+			
+			
+			In Angular
+			
+			Json list containing an array of 1000 items
+			write a code to display 10 items for each scroll using scroll event.
+			
+			
+			For example, let's say left is 0 and right is 9. To find the middle index:
+
+Calculate the difference: right - left = 9 - 0 = 9.
+Divide the difference by 2: 9 / 2 = 4.5.
+Since array indices must be integers, you typically round down (truncate) the result to the nearest integer, which gives you 4. So, left + (right - left) / 2 in this case is 0 + 4 = 4, which is the correct middle index for a subarray with indices 0 to 9.
+
+Using this expression ensures that you consistently calculate the middle index in a way that avoids integer overflow issues and ensures correctness in your binary search implementation.
+
+
+
+
+
+int right=arr.length; // if given exclusive range, use left<right, if given inclusive range like arr.length-1, then use left<=right in binary search
+		while(left<right) { //exclusive range
+		// means that the search space excludes the element pointed to by right and only considers the elements between left and right - 1
+		}
+		
+		vs
+		
+int right=arr.length-1;
+		while(left<=right) {
+		}
+		
+
+
+
+		maximum subarray
+		
+		int[] arr = {22,21,29,22};
+	
+		int sum=arr[0];
+		for(int i=1;i<arr.length;i++){
+			sum&=arr[i];
+		}
+
+		int sum2=arr[0];
+		int count=0;
+		
+		for(int i=0;i<arr.length;i++) {
+			
+			if(sum2<=sum) {
+				System.out.println(++count);	
+				if(i+1<arr.length)
+					sum2=arr[i+1];
+			}
+			else {
+				if(i+1<arr.length) {
+					sum2&=arr[i+1];
+				}
+			}
+		}
+   
+   
+   
+   How to know if this problem is DP Series?
+   
+   #The problem exhibits a certain property of optimality: 
+   Many DP problems involve optimizing a value, such as maximizing profit or minimizing cost,
+   which suggests the use of dynamic programming to find the optimal solution.
+   
+   #Can you formulate a recursive solution? Try to see if you can come up with a recursive solution to the problem.
+   If you find that solving the problem can be naturally broken down into smaller instances of the same problem, it could be a DP problem.
+   
+   
+   
+   
+   

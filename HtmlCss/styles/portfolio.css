@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+
+/* text-decoration: none; removes underlines */
+
+/* BOX-SIZING Notes */
+/* total width and height of an element i.e padding and borders, are to be included or not. */
+
+/* This is the default value of the box-sizing property. 
+In this mode, the width and height properties include only the content. 
+Border and padding are not included in it i.e if we set an element’s width to 200 pixels, 
+then the element’s content box will be 200 pixels wide, and the width of any border or padding will be added to the final rendered width. */
+
+
+/* border-box: In this mode, the width and height properties include content, 
+padding, and borders i.e if we set an element’s width to 200 pixels, 
+that 200 pixels will include any border or padding we added, 
+and the content box will shrink to absorb that extra width. 
+This typically makes it much easier to size elements. */
+
+.container{
+    background-color: #f0f3fd;
+    color: #333;
+}
+
+.header{
+    position:fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: 30px 10%; /*30px is the top and bottom padding, 10% right & left */
+    display: flex;
+    align-items: center;
+    z-index: 100;
+}
+
+.logo{
+    font-size: 28px;
+    font-weight: 700;
+    margin-right: auto;
+}
+
+.navbar a{
+    margin-right: 35px;
+    font-size: 15px;
+    color: #333;
+    font-weight: 500;
+    transition: color .5s;
+}
+.navbar a:hover{
+    color: #37a1f2;
+}
+
+.toggle-icon{
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.home {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 60px 10% 0; /*top, right-left,bottom*/
+}
+
+.home-content{
+    max-width: 600px;
+}
+
+.home-content h1{
+    font-size: 56px;
+    line-height: 1.2;
+}
+
+.home-content h3{
+    font-size: 32px;
+}
+
+.home-content h3 span{
+    color:#37a1f2
+}
+
+.home-content p{
+    font-size: 16px;
+    margin: 15px 0;
+}
+
+
+
+/* will have a height equal to 100% of the viewport height.  */
+
+
+.social-media a{
+    display: inline-flex;
+    width: 40px;
+    height: 40px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #37a1f2;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 20px;
+    color:#37a1f2;
+    margin:5px 15px 25px 0;    
+    transition: .5s;
+}
+
+.social-media a:hover{
+    background-color: #37a1f2;
+    color: #f0f3fd;
+}
+
+.btn{
+    padding: 11px 32px;
+    background:#37a1f2;
+    border:2px solid #37a1f2;
+    border-radius: 40px;
+    box-shadow: 0 0 10px rgba(0,0,0,.1);
+    font-size: 16px;
+    color: #f0f3fd;
+    letter-spacing: 1px;
+    font-weight: 600;
+    transition: .5s;
+}
+/* The background property is a shorthand property for:
+
+background-color
+background-image
+background-position
+background-size
+background-repeat
+background-origin
+background-clip
+background-attachment */
+
+.btn:hover{
+    background-color: transparent;
+    color: #37a1f2;
+}
+
+
+/* .home-img img{
+    position: absolute;
+    bottom: 0;
+    right: 30px;
+    width: 45%;
+    pointer-events: none;
+    border-style: solid;
+} */
+
+.resizable-container {
+    width: 500px; /* Set the desired width of your container */
+    height: 700px; /* Set the desired height of your container */
+    overflow: hidden; /* Ensure that the content doesn't overflow the container */
+  }
+
+  .resizable-image {
+      width: 100%;
+      height: 100%;
+      object-fit: contain; /* Use 'cover' to maintain aspect ratio and cover the entire container */
+    }

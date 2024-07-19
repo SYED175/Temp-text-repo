@@ -1,0 +1,52 @@
+scroll-behaviour
+background-color:var()
+------------------------
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+vendor-prefixed with "-webkit-" for compatibility with WebKit browsers.
+
+-------------------------
+In CSS, the rem unit stands for "root em" and is relative to the font-size of the root element 
+(usually the <html> element). It allows you to create a more scalable and consistent layout. 
+For example, if the root font size is set to 16 pixels, 1rem is equal to 16 pixels.
+
+body {
+  font-size: 16px; /* Root font size */
+}
+
+h1 {
+  font-size: 2rem; /* 2 times the root font size (32px) */
+}
+
+p {
+  font-size: 1.5rem; /* 1.5 times the root font size (24px) */
+}
+
+By using rem, you can ensure that your layout remains proportional even if the root font size changes.
+------------------------
+
+text-transform: capitalize;: This property is used to control the capitalization of text. When set to capitalize, it transforms the first character of each word to uppercase while leaving the rest of the characters in lowercase.
+
+------------------------
+
+Note:
+background and background-color are CSS properties related to styling the background of an element, but they serve different purposes.
+
+background is a shorthand property that allows you to set various background-related properties in a single declaration.
+It can include values for background-color, background-image, background-repeat, background-position, and other background-related properties.
+It provides more flexibility when styling the background by allowing you to combine different background features.
+
+
+-----------------------
+The display: none; CSS property is used to hide an element from the layout of the page. When applied to an element, 
+it removes the element from the normal flow of the document, and the space it would have occupied is collapsed. 
+In other words, the element becomes invisible, and other elements on the page act as if the hidden element doesn't exist.
+
+
+----------------------
+
+In summary, a "media query" is a general term referring to the entire construct that allows you to apply styles based on certain conditions,
+"media screen" is one specific condition or context within a media query, indicating that the styles should apply to screen-based devices. 
+
+

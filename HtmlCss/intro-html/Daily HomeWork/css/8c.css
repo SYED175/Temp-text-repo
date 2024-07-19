@@ -1,0 +1,53 @@
+.search-bar {
+    border-radius: 8px;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 12px;
+    margin-right: 15px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-color: rgb(200, 200, 200);
+}
+
+.google-img{
+    margin-bottom: 20px;
+}
+
+.google-search {
+    border: none;
+    width: 500px;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    padding-right: 10px;
+    padding-left: 10px;
+    box-shadow: 0px 1px 6px rgba(0, 0, 0, .26); /*horizontal vertical blur rgba(red,green,blue,opacity)*/
+    border-radius: 20px;
+    font-size: 14px;
+    font-family: Arial;
+}
+
+.card-1{
+    text-align: center;
+}
+.card-2{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.card-3{
+    text-align: center;
+}
+
+.google-search-btn{
+    background-color: rgb(240,240,249);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-weight: bold;
+    border:none;
+    margin-right: 15px;
+    cursor: pointer;
+}

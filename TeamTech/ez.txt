@@ -1,0 +1,58 @@
+1. *App Overview:*
+   - The app should have a user-friendly interface allowing students to browse and search for notes.
+   - Notes can be categorized based on subjects, topics, or other relevant criteria.
+
+2. *Notes Access Control:*
+   - *Free Notes:*
+     - Free notes should be accessible to all users without any restrictions.
+     - Implement a database structure where free notes are marked accordingly.
+     - Design the app to display free notes openly to all users.
+
+   - *Paid Notes:*
+     - Paid notes should be accessible only to users who have purchased them.
+     - Implement a payment gateway for users to make purchases securely. || Stripe - simple API for secure payment processing 
+     - Upon successful payment, update the user's account to grant access to the paid notes.
+     - Restrict access to paid notes for users who haven't made the required payment. 
+	 
+	 /*Implement middleware with express.js to check whenever user access paid notes*/
+	 
+	 /*
+	 role & permission based users which can be updated based on purchase. 
+	 */
+
+3. *User Authentication:* ||  Passport.js: It supports various authentication strategies, including JWT.
+
+   - Implement user authentication using JWT (JSON Web Tokens) for a secure and stateless authentication process.
+   - Users should be able to register, log in, and recover/reset their passwords.  /* SendGrid or Nodemailer for password recovery */
+   - Use secure password hashing for storing and managing user passwords in the database. /* bcrypt Library for hashing */
+   - Store user-related information, such as purchased notes and preferences, in the user profile.
+
+4. *Backend (Node.js):*
+   - Use Node.js for the backend to handle authentication, authorization, and interactions with the database.
+   - Set up endpoints for user registration, login, password recovery, and note retrieval.
+   - Implement middleware to check user authentication status and authorization before accessing paid notes.
+
+5. *Database (MongoDB, for example):*
+   - Store user data, notes information, and purchase history securely.
+   - Design a schema that allows efficient retrieval of notes based on their access control (free or paid).
+
+6. *Frontend (React Native):*
+   - Develop a user-friendly interface with React Native.
+   - Implement screens for note browsing, user authentication, and payment processes.
+   - Integrate API calls to interact with the backend for user authentication and note retrieval.
+
+7. *Payment Integration:*
+   - Integrate a payment gateway (e.g., Stripe) for processing payments securely.
+   - Provide a seamless payment experience for users to purchase access to paid notes.
+
+8. *Testing:*
+   - Conduct thorough testing for authentication flows, note access control, and payment processes.
+   - Test on various devices and screen sizes to ensure a consistent user experience.
+
+9. *Security:*
+   - Implement SSL/TLS for secure communication between the app and the server.
+   - Regularly update dependencies to address security vulnerabilities.
+
+10. *Deployment:*
+    - Deploy the backend on a secure server with proper configurations.
+    - Use reliable hosting services for both backend and database.

@@ -1,0 +1,6 @@
+Lec 14: find sqrt(x): we had used the search space start from 0-x.
+
+We learnt that Binary search can be used, 
+* if we have a monotonic function.. (increasing order | deacreasing order) or possibly both (sorted & rotated array).
+* if we have to find the value within the search space.. example of find sqrt(x).
+* find the largest minimum | Minimized Maximum distance, force, capacity etc are hints for binary search

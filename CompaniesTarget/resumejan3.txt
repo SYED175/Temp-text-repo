@@ -1,0 +1,22 @@
+#Summary
+Experienced web developer with 2.7 years in React and Angular, specializing in building responsive, modular applications. 
+Strong expertise in state management, cross-browser compatibility, and collaborative teamwork. 
+Committed to continuous learning and code quality through thorough reviews.
+
+Expertise Skill Set: 
+•	React js, JavaScript, HTML5, CSS.
+•	Angular, Typescript.
+•	Database: MySQL, Postgres.
+•	Tools: Tortoise SVN. 
+•	Java Object Oriented Programming, Node.js, Express.js.
+
+Additional Skill Set: 
+•	Spring boot, Django, Flask. 
+•	Python, MongoDB. 
+•	Github, Jenkins, Docker.
+•	Microsoft Azure, Gcp (Google cloud). 
+
+
+#React
+Improved UI performance by 60% by identifying bottlenecks, leveraging technologies like Context API and React Hooks.
+Achieved a significant reduction of up to 40% in loading time by optimizing components and effectively using React life cycle methods.

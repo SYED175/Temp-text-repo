@@ -1,0 +1,70 @@
+LLD
+
+What is low level design?
+Low level design is a detailed design of system components, where we define type of algorithm, data structures to use.
+Its a blue print for actual coding ensuring smooth implementation.
+
+Converting HLD to LLD?
+HLD can be converted to LLD by breaking the system down into system components/modules.
+for each module, define the datastructure, algorithm needed.
+
+How do you choose datastructure for your specific module?
+I choose based on requirement, for example if fast retrieval is required
+we could use hash table,
+if maintaing order is important we can use linkedList or array.
+
+
+modularity in LLD: by breaking down the system into smaller independent modules.
+reusability in LLD: inheritance can be used for reusability. designing modules interface such that it can be reusable.
+
+
+coupling: degree of interdependence between modules. low coupling the better.
+cohesion: how closely elements are related to each other within module or united in their purpose, high cohesion leads to a more maintainable and understandable design.
+
+example of cohesion...
+A userClass containing validation of email address or sendEmail(), is a low cohesion.
+The purpose of userClass is to storing email address not validating it or sending email.
+
+
+example of coupling.
+
+Customer class consisting List<Order>, and Order class consisting Customer object.. example of high coupling.
+we can make this loose coupled, by following
+
+customer class should not contain List<Order> instead, only Order class should contain customerId.
+
+
+* Vertical scaling: upgrading the server, adding more ram for example... it has a limit.
+* Horizontal scaling: add more servers instead of having one high performing server... can have limitless servers, no single point of failure.
+	a) Load Balancer: to ensure the requests are distributed as not to overload any one server.
+	It is reverse proxy, it directs incoming request to servers, using algorithm like Round Robin 
+	( CPU scheduling algorithm where each process is cyclically assigned a fixed time slot.)
+	
+* 
+A CDN, or Content Delivery Network, is a distributed network of servers 
+strategically located across the globe to efficiently deliver web content to users. 
+
+graphQL is another API pattern introduced by Facebook, where instead of making multiple request to server,
+we can make one request like a query to get all resources at once from server.
+
+web-sockets use bi-directional communication, example chatting apps.
+
+ACID Properties: Durability,Isolation, Atomicity, Consistency
+
+Sharding: splitting database into different servers horizontal scaling).. i guess, this is possible if there is no foreign key constraints.
+Each shard is a separate database, and a shard key is used to determine the distribution of data.
+
+
+we have REST Api's and application that follow REST are called RESTful systems.
+
+** SOLID Principles 
+
+Single responsibility principle -  class should have only one responsibility, which makes easy to understand & work with.
+Open/close principle - open for extension, closed for modification.
+Liskov substitution principle - objects of superclass can be replaceable with objects of subclass.
+Interface segregation principle - class should only implement interfaces that are relevant to it.
+Dependency inversion principle - high level modules (business logic) should not depend on low level modules (database modules), but both should depend on abstraction.
+example it shud not focus on which type of database, instead it should focus on storage, whereas in low level we can decide what type of database we want.
+
+
+

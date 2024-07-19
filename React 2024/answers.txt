@@ -1,0 +1,68 @@
+//Q1
+const array1 = [
+  { name: "Jake", roll: 10, marks: 80 },
+  { name: "John", roll: 20, marks: 85 },
+  { name: "Amy", roll: 30, marks: 60 },
+];
+
+const filteredStud = array1.filter((res) => res.marks > 60);
+const sumTotal = filteredStud.reduce((accum, curr) => accum + curr.marks, 0);
+console.log(sumTotal);
+
+
+
+
+//Q2) closure
+//Method: 01
+const createBase = (initialVal) => {
+  return {
+    addSix: (someValue) => {
+      return someValue + initialVal;
+    },
+  };
+};
+
+const myObj = createBase(6);
+console.log(myObj.addSix(10));
+console.log(myObj.addSix(21));
+
+
+//second method for closure
+
+function createBase(initialVal) {
+  return function (someValue) {
+    return someValue + initialVal;
+  };
+}
+
+const obj1 = createBase(6);
+console.log(obj1(10));
+console.log(obj1(21));
+
+
+//Q3)
+//Without using promise.
+console.log("start");
+function importantAction(username, age) {
+  console.log(
+    `Hii ${username} your age is: ${age}, this is without use of promise`
+  );
+}
+
+setTimeout(importantAction, 1000, "Syed", 25);
+console.log("stop");
+
+
+//with promise
+console.log("start");
+const myPromise = (username) =>
+  new Promise((resolve, reject) => {
+    setTimeout(() => {
+      resolve(`Hello ${username}`);
+    }, 1000);
+  });
+
+myPromise("John")
+  .then((res) => console.log(res))
+  .catch((err) => console.log(err));
+console.log("stop");

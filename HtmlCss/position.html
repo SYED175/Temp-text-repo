@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CSS position practice</title>
+</head>
+
+<body style="height: 3000px; 
+    padding-top: 60px;
+    padding-left: 80px;
+">
+<!-- z-index element with position:non-static comes on top of other element with position:fixed/relative it appears on front.. to resolve this we have to set z-index,
+     the higher the value the top most it appears and other below it, position:static be default, and those elements always appear back-->
+
+<!-- position:fixed; placed in the browser window -->
+<!-- position:absolute; placed in the page -->
+
+<!-- use of position:absolute is with either fixed or relative, where we can exactly position the element relative to that div rather than entire page, 
+    1. make that div position:relative, inside you can use position:absolute
+-->
+    <div style="
+        background-color: black;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 100;
+        ">header</div>
+
+        <div style="
+            background-color: green;
+            color: white;
+            position: fixed;
+            left: 0;
+            bottom: 0;
+            top:50px;
+            width: 72px;
+        ">sidebar
+        
+    <div style="background-color: red;
+    color: white;
+    position: absolute;
+    right: 0;
+    top:0;
+">X</div></div>
+
+    <div style="background-color: red;
+        color: white;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+    ">absolute</div>
+    <div style="
+            background-color: lightblue;
+            height: 200px;
+            width: 200px;
+            position: relative;
+            z-index: 1;
+            ">div 1</div>
+    <div style="
+            background-color: lightpink;
+            height: 200px;
+            width: 200px;
+            position: relative;
+        ">
+        div 2
+        <div style="background-color: black;
+            color: white;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+        ">4:12</div>    
+    </div>
+</body>
+
+</html>

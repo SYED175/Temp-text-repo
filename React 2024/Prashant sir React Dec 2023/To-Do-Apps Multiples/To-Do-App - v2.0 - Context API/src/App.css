@@ -1,0 +1,12 @@
+
+.app-container{
+  border-style: solid;
+  width: 500px;
+  min-width: 300px;
+  border-width: 1px;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-left: 30%;
+  margin-right:70%;
+}

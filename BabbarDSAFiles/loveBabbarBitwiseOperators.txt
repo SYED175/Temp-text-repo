@@ -1,0 +1,292 @@
+#1)+
+
+		int a=4,b=6;
+		System.out.println(a|b);//6
+		System.out.println(a&b);//4
+		System.out.println(~a);//-5
+		System.out.println(~b);//-7 (~ mean reverse 1 to 0 and vice versa, if left most bit high, its negative.. now to get the value.. use 2's complement and then print it with negative sign because left most bit was high)
+		System.out.println(a^b);//2
+		
+		
+#2)//left shift =  2 power n * number
+		//right shift = number/2 power n 
+		
+		System.out.println(19>>3);//2
+		System.out.println(4<<4);//64
+		System.out.println(15>>2);//3
+		System.out.println(8<<3);//64
+			
+			
+Side note: we can use (n&1) to find the last bit, and the do right shift till we find all the bits..
+
+we also know, if 0000 0101
+if right hand side bit is high its always odd
+else its even if its low.
+
+
+//#1)Approach  Convert decimal to binary, by storing the remainder, till n!=0, then reverse it
+		//#2)Approach  Use & operator to find the most right bit, 
+		int ans = 0;
+		for(int i=1;i<=3;i++) {
+			ans = ans*10+i;
+		}	
+		
+		System.out.println(ans); //123
+		
+		double ansY=0;
+		int j=0;
+		for(int i=1;i<=3;i++) {
+			ansY=i*Math.pow(10, j++) + ansY;
+		}
+		System.out.println((int)ansY); // reverse ka formula, 321
+		
+		
+		//Program to convert decimal to binary using operator '&'
+		int n = 6;
+		double res=0;
+		int bit=0;
+		int k=0;
+		while(n!=0) {
+			bit=n&1;
+			res = bit*Math.pow(10, k++) + res;
+			n=n>>1;
+		}
+		System.out.println((int)res);//typecasting to int
+		
+		//Program to convert binary to string using Integer.parseInt(valueString,radix)
+		
+		Scanner sc = new Scanner(System.in);
+		String str =  sc.nextLine();
+		int valueInt = Integer.parseInt(str,16);
+		System.out.println(valueInt);
+		//The radix is the number of values for a single digit.
+		//Hexadecimal would be 16. Octal would be 8, Binary would be 2,
+		
+		
+		=========================
+		
+		// addition of 2 binary numbers
+		String a = "110";
+		String b = "110";
+		
+		int aa = Integer.parseInt(a,2);
+		int bb = Integer.parseInt(b,2);
+		
+		int res=0;
+		int bal=0;
+		StringBuilder sb = new StringBuilder();
+		
+	
+		
+		
+//		both should be of same length; else make it same for shorter one by appending zeroes
+		for(int i=a.length()-1;i>=0;i--) {
+
+			int valueOfA = a.charAt(i)-'0';
+			int valueOfB = b.charAt(i)-'0';
+			
+			res=valueOfA+valueOfB+bal;
+			
+			if(res>1) {
+				bal=1;
+				int val = res%2;
+				sb.append(val);
+			}
+			else {
+				sb.append(res);
+				bal=0;
+			}
+		}
+		
+		if(bal!=0)
+			sb.append(1);
+		
+	
+		
+		System.out.println("The sum of " +a+" and "+b+" in binary representation");
+		System.out.println(Integer.parseInt(a,2)+" "+Integer.parseInt(b,2)+" in decimal representation");
+		String str = sb.reverse().toString();
+		System.out.println(str+" in binary");
+		System.out.println(Integer.parseInt(str,2)+" in decimal");
+		
+	=====================================
+	
+	//Binary representation of floating number.
+	
+	float a = 0.5f;
+	int bits = Float.floatToIntBits(a);//
+	String.format("%32s", Integer.toBinaryString(bits)).replace(" ", "0");
+	String.format("%8s", Integer.toHexString(bits)).replace(" ", "0");
+	
+	
+	//output
+	"00111111000000000000000000000000" bit representation (32 bits)
+	"3f000000" hexadecimal representation (32 bits)
+====================================================================
+	
+	To convert the decimal number 7.25 to binary, you can follow a similar process for the fractional part:
+
+1. Convert the integer part (7) to binary: 
+2. Convert the fractional part (0.25) to binary:
+
+   - Multiply 0.25 by 2: \(0.25 \times 2 = 0.5\). Take the integer part (0), so the first binary digit is 0.
+   - Multiply the remaining fractional part (0.5) by 2: \(0.5 \times 2 = 1.0\). Take the integer part (1), so the next binary digit is 1.
+
+So, the binary representation of 7.25 is the concatenation of the binary representation 
+of the integer part and the binary representation of the fractional part:
+
+Therefore, the binary representation of 7.25 is 7.25 is 111.01.
+
+public class DecimalToBinary {
+    public static void main(String[] args) {
+        double decimalNumber = 7.25;
+
+        // Convert the integer part to binary
+        int integerPart = (int) decimalNumber;
+        String binaryIntegerPart = Integer.toBinaryString(integerPart);
+
+        // Convert the fractional part to binary
+        double fractionalPart = decimalNumber - integerPart;
+        StringBuilder binaryFractionalPart = new StringBuilder(".");
+        while (fractionalPart > 0) {
+            fractionalPart *= 2;
+            int bit = (int) fractionalPart;
+            binaryFractionalPart.append(bit);
+            fractionalPart -= bit;
+        }
+
+        // Print the result
+        String binaryRepresentation = binaryIntegerPart + binaryFractionalPart.toString();
+        System.out.println(decimalNumber + " in binary is: " + binaryRepresentation);
+    }
+}
+
+
+
+====================================================================
+
+Note: little advanced.. 
+	IEEE 754 is a standard for representing floating-point numbers in binary. It defines formats for 32-bit (single precision) and 64-bit (double precision) binary floating-point representations. Here, I'll provide a brief overview of the IEEE 754 double-precision format since it is commonly used.
+
+For double precision (64 bits), the IEEE 754 format is divided into three components:
+
+1. **Sign bit (1 bit):** Determines the sign of the number. 0 represents positive, and 1 represents negative.
+
+2. **Exponent (11 bits):** Represents the exponent of the number. It uses a biased representation, where a bias value is subtracted from the actual exponent to allow for both positive and negative exponents. The bias for double precision is 1023. This means that an exponent of 0 is represented as 1023 in the exponent field.
+
+3. **Fraction (52 bits):** Also known as the significand or mantissa, it represents the fractional part of the normalized binary number.
+
+The general formula for the value of a double-precision IEEE 754 floating-point number is:
+
+\[ (-1)^{\text{sign}} \times 1.\text{fraction} \times 2^{\text{exponent} - \text{bias}} \]
+
+For example, let's say we want to represent the decimal number 7.25 in IEEE 754 double-precision format:
+
+1. **Sign bit:** 0 (positive)
+2. **Exponent:** The binary representation of (1023 + exponent), where exponent is the binary representation of the unbiased exponent. For 7.25, the unbiased exponent is 2, so the exponent field would be \(1023 + 2 = 1025\) in binary.
+3. **Fraction:** The binary representation of the fractional part of 7.25 (0.25), which is \(0.01_2\).
+
+Putting it all together, the IEEE 754 representation for 7.25 would be:
+
+\[ \text{0 10000000001 0010000000000000000000000000000000000000000000000000} \]
+
+This is a simplified explanation, and the actual implementation involves additional considerations such as handling special values (e.g., zero, infinity, NaN) and rounding modes.
+	=====================================
+	
+	//given positive decimal, give its Negative binary representation
+		int num=8;
+		
+		//step 1: take its 1's complement, then add 1 =  2's complement 
+		int i=0,bal=1;
+		int res = 0;
+		StringBuilder sb = new StringBuilder();
+		
+		while(i<8) { // 8-bit representation
+			int bit=num&1;
+			bit=(bit==0)?1:0; //1's complement
+			
+			res = bit+bal; // Initially bal = 1 // adding 1 to make it 2's complement
+			if(res>1) {
+				int val = res%2;
+				sb.append(val);
+				bal=1;
+			}
+			else {
+				sb.append(res);
+				bal=0;
+			}
+			num=num>>1;
+			i++;
+		}
+		
+		System.out.println(sb.reverse().toString() +" negative representation");
+		
+		
+	==========================================
+	
+	
+	
+	
+        // (n & n-1) removes the last '1' in the binary form 
+        // In Java language, the maximum integer is 2147483647. int type in Java is signed means (-2147483648 to 2147483647)
+		
+		
+============================================================
+	
+XOR swap algorithm
+
+X := X XOR Y; // XOR the values and store the result in X
+Y := Y XOR X; // XOR the values and store the result in Y
+X := X XOR Y; // XOR the values and store the result in X
+
+	
+swap the values of two variables without using the temporary variable which is normally required.
+
+https://stackoverflow.com/questions/10493411/what-is-bit-masking
+example:
+System.out.println(x +" is the value of x  "+y+" is the value of y --After Swapping");
+	
+		int x = 6;
+		int y = 7;
+		System.out.println(x +" is the value of x  ||"+y+" is the value of y --Before Swapping");
+			
+		x = x^y;
+		y = y^x;
+		x = x^y;
+		
+		System.out.println(x +" is the value of x  ||"+y+" is the value of y --After Swapping");
+	}	
+output:
+6 is the value of x  ||7 is the value of y --Before Swapping
+7 is the value of x  ||6 is the value of y --After Swapping
+
+============================================================
+21 Nov'23
+https://www.geeksforgeeks.org/swap-bits-in-a-given-number/	
+To Do in next iteration		
+		
+		
+		
+		
+		Cyclic sort Algorithm.. condition Array range [1,n] 
+		
+				int[] arr = {5,3,4,1,2};
+		
+		int i=0;
+		while(i<arr.length) {
+			int correctIndex = arr[i]-1;
+			if(arr[i]!=arr[correctIndex]) {
+				swap(arr,i,correctIndex);
+			}
+			else
+				i++;
+		}
+		
+		System.out.println(Arrays.toString(arr));
+	}
+	
+	public static void swap(int[] arr,int i,int correctIndex) {
+		int temp = arr[i];
+		arr[i] = arr[correctIndex];
+		arr[correctIndex] = temp;
+	}

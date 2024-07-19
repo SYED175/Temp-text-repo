@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Nested Flex box practice</title>
+        <link rel="stylesheet" href="css/13b.css">
+    </head>
+    <body>
+        <div style="display: flex;height: 50px;">
+            <div style="background-color: lightpink;width: 100px;"> </div>
+            <div style="background-color: lightblue;width: 200px;">
+                <div>row1</div>
+                <div style="display: flex;
+                    justify-content: space-between;
+                ">
+                    <div style="background-color: black;color: white;">row 2</div>
+                    <div style="background-color: black;color: white;">row 2</div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<!-- THE PROBLEM IS WE WERE USING <P> WHICH ALREADY HAD SOME MARGIN.. SO BETTER USE DIV HERE!!!!!!!!!!1 -->
+
+<!-- <div class="flex-box">
+    <div class="column-1"> </div>
+    <div class="column-2"> 
+        <div>row1</div>
+        <div class="sub-flex-box">
+            <div class="row2-item">row2</div>
+            <div class="row2-item">row2</div>
+        </div>
+    </div>
+</div> -->

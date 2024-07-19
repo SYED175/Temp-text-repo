@@ -1,0 +1,21 @@
+.flex-box{
+    display: flex;
+    height: 50px;
+}
+.column-1{
+    background-color: lightblue;
+    width: 100px;
+}
+.column-2{
+    background-color: lightpink;
+    width: 200px;
+}
+.sub-flex-box{
+    display: flex;
+    justify-content: space-between;
+}
+
+.row2-item {
+    background-color: black;
+    color: white;
+  }
